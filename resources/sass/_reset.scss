@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: YekanBakh;
+
+    &::before,
+    &::after {
+        box-sizing: border-box;
+    }
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    direction: rtl;
+    background-color: #F5F7FA;
+}
+
+:root {
+    --primary-color: #1FC5B9;
+    --dark-button-color: rgba(3, 52, 50, 0.1);
+    --text-color: #155A6D;
+    --light-primary-color: #CAF1F1;
+}
+
+a {
+    text-decoration: none;
+}

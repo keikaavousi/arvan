@@ -1,0 +1,22 @@
+.home-description {
+    padding: 100px 20px 0;
+    text-align: center;
+    color: var(--text-color);
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+.home-description__title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.home-description__content {
+    line-height: 2;
+    font-size: 1.1rem;
+}
+
+.home-buttons {
+    justify-content: center;
+    margin-top: 30px;
+}

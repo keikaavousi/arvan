@@ -1,0 +1,21 @@
+.page-breadcrumb {
+    display: flex;
+    list-style-type: none;
+    margin: 50px 0;
+}
+
+.page-breadcrumb__item {
+    position: relative;
+    padding: 10px 5px 0 12px;
+
+    &:not(:last-of-type)::after {
+        content: url('/img/arrow-left.svg');
+        position: absolute;
+        left: 0;
+        top: 12px
+    }
+}
+
+.page-breadcrumb__item-link {
+    color: #A7B6CB;
+}
