@@ -21,6 +21,29 @@
 
 .header__navbar {
     width: 100%;
+    display: flex;
+    align-items: center;
+
+    @media only screen and (max-width: 768px) {
+        display: none;
+
+    }
+}
+
+.header__nav {
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+.header__navbar--open {
+    @media only screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+    }
 }
 
 .header__items {
@@ -28,27 +51,72 @@
     justify-content: space-between;
     align-items: center;
     list-style: none;
+
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+        flex-direction: column;
+        margin-top: 20px;
+    }
 }
 
 .header__item {
     padding: 10px;
     margin-right: 20px;
+
+    @media only screen and (max-width: 768px) {
+        margin-right: 0;
+        width: 100%;
+        background-color: #ffffff1a;
+        padding: 10px;
+        border-radius: 12px;
+        margin-bottom: 15px;
+    }
 }
 
 .header__logo {
-    margin-left: 40px;
+    position: absolute;
+    right: 7%;
 }
 
 .header__right {
     display: flex;
     align-items: center;
     width: 50%;
+
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+        justify-content: center
+    }
 }
 
 .header__left {
     width: 50%;
     display: flex;
     justify-content: flex-end;
+
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.header__navbar__button {
+    display: none;
+
+    @media only screen and (max-width: 768px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 20px;
+        top: 50px;
+        width: 30px;
+        height: 30px;
+        background-color: transparent;
+        border: transparent;
+        outline: none;
+    }
 }
 
 .header__button {
@@ -58,9 +126,14 @@
     color: #fff;
     padding: 10px 30px;
     cursor: pointer;
+
+    @media only screen and (max-width: 768px) {
+        background-color: transparent;
+        padding: 0;
+    }
 }
 
-.header__navbar,
+
 .header__intro {
     display: flex;
     align-items: center;
@@ -69,6 +142,10 @@
 
 .header__navbar {
     justify-content: space-between;
+
+    @media only screen and (max-width:1300px) {
+        padding-right: 7%;
+    }
 }
 
 .header__intro {
@@ -104,4 +181,9 @@
 
 .header__subtitle {
     font-size: 1.3rem;
+}
+
+.page-scroll-lock {
+    height: 100vh;
+    overflow: hidden;
 }

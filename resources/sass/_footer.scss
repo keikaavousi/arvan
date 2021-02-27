@@ -9,4 +9,8 @@
     font-size: 1.2em;
     line-height: 1.5;
     text-align: center;
+
+    @media only screen and (max-width: 768px) {
+        max-width: 90%;
+    }
 }

@@ -21,13 +21,15 @@
     display: flex;
     transition: all 0.5s ease;
     position: relative;
+
+    @media only screen and (max-width: 768px) {
+        flex-wrap: wrap;
+    }
 }
 
 
 .home-slider__thumbnails-list-item {
     overflow: hidden;
-    -o-object-position: 50% 50%;
-    object-position: 50% 50%;
     list-style-type: none;
     width: 14%;
     text-align: center;
@@ -36,6 +38,10 @@
         path {
             fill: var(--primary-color)
         }
+    }
+
+    @media only screen and (max-width: 768px) {
+        width: 25%;
     }
 }
 
@@ -67,6 +73,10 @@
     top: 50%;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
+
+    @media only screen and (max-width: 768px) {
+        display: none;
+    }
 }
 
 .home-slider__controller-right {
@@ -75,4 +85,8 @@
     top: 50%;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
+
+    @media only screen and (max-width: 768px) {
+        display: none;
+    }
 }

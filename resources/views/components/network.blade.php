@@ -28,183 +28,228 @@
 
 
                 <div class="home-network__inner-tab-container">
-                    <ul class="home-network__inner-tabs">
+                    <div class="home-network__inner-tabs">
+                        <div class="home-network__inner-tab-wrapper">
+                            <div data-id="inner-tab1" class="home-network__inner-tab tab selected">سطح ۱</div>
+                            <div id="inner-tab1" class="home-network__inner-tab-panel tab-panel">
+                                <div class="row home-network__inner-tab-panel-row">
+                                    <div class="home-network__box home-network__box--fill">
+                                        <div class="home-network__box-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24.836"
+                                                viewBox="0 0 16 24.836">
+                                                <g id="award_2_" data-name="award (2)"
+                                                    transform="translate(0.939 1.275)">
+                                                    <ellipse id="Ellipse_1244" data-name="Ellipse 1244" cx="7" cy="7.5"
+                                                        rx="7" ry="7.5" transform="translate(0.061 -0.275)" fill="none"
+                                                        stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" />
+                                                    <path id="Path_131020" data-name="Path 131020"
+                                                        d="M8.241,13.89,7,23.233l5.128-3.077,5.128,3.077L16.014,13.88"
+                                                        transform="translate(-4.949 -0.672)" fill="none" stroke="#fff"
+                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" />
+                                                </g>
+                                            </svg>
+                                        </div>
+
+                                        <h3 class="home-network__box-title">عنوان رتبه</h3>
+                                        <h4 class="home-network__box-subtitle">قهرمان</h4>
+
+                                    </div>
+                                    <div class="home-network__box home-network__box--fill">
+                                        <div class="home-network__box-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="22"
+                                                viewBox="0 0 18 22">
+                                                <g id="file-text_2_" data-name="file-text (2)"
+                                                    transform="translate(-3 -1)">
+                                                    <path id="Path_131051" data-name="Path 131051"
+                                                        d="M14,2H6A2,2,0,0,0,4,4V20a2,2,0,0,0,2,2H18a2,2,0,0,0,2-2V8Z"
+                                                        fill="none" stroke="#fafafa" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="2" />
+                                                    <path id="Path_131052" data-name="Path 131052" d="M14,2V8h6"
+                                                        fill="none" stroke="#fafafa" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="2" />
+                                                    <line id="Line_894" data-name="Line 894" x1="8"
+                                                        transform="translate(8 13)" fill="none" stroke="#fafafa"
+                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" />
+                                                    <line id="Line_895" data-name="Line 895" x1="8"
+                                                        transform="translate(8 17)" fill="none" stroke="#fafafa"
+                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" />
+                                                    <path id="Path_131053" data-name="Path 131053" d="M10,9H8"
+                                                        fill="none" stroke="#fafafa" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="2" />
+                                                </g>
+                                            </svg>
+
+                                        </div>
+
+                                        <h3 class="home-network__box-title">سابقه</h3>
+                                        <h4 class="home-network__box-subtitle">۱۰ سال</h4>
+
+                                    </div>
+                                    <div class="home-network__box home-network__box--fill">
+                                        <div class="home-network__box-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20.087"
+                                                viewBox="0 0 24 20.087">
+                                                <g id="users_1_" data-name="users (1)" transform="translate(0 -1.913)">
+                                                    <path id="Path_131024" data-name="Path 131024"
+                                                        d="M17,21V19a4,4,0,0,0-4-4H5a4,4,0,0,0-4,4v2" fill="none"
+                                                        stroke="#fafafa" stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" />
+                                                    <circle id="Ellipse_1245" data-name="Ellipse 1245" cx="4" cy="4"
+                                                        r="4" transform="translate(5 3)" fill="none" stroke="#fafafa"
+                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" />
+                                                    <path id="Path_131025" data-name="Path 131025"
+                                                        d="M23,21V19a4,4,0,0,0-3-3.87" fill="none" stroke="#fafafa"
+                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" />
+                                                    <path id="Path_131026" data-name="Path 131026"
+                                                        d="M16,3.13a4,4,0,0,1,0,7.75" fill="none" stroke="#fafafa"
+                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" />
+                                                </g>
+                                            </svg>
+
+                                        </div>
+
+                                        <h3 class="home-network__box-title">تعداد نفرات</h3>
+                                        <h4 class="home-network__box-subtitle">۷ نفر فنی - ۳ نفر بیزنسی</h4>
+
+                                    </div>
+                                </div>
+                                <div class="row home-network__inner-tab-panel-row">
+                                    <div class="home-network__box home-network__box--outline">
+                                        <div class="home-network__box-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="22"
+                                                viewBox="0 0 18 22">
+                                                <g id="file-text_2_" data-name="file-text (2)"
+                                                    transform="translate(-3 -1)">
+                                                    <path id="Path_131021" data-name="Path 131021"
+                                                        d="M14,2H6A2,2,0,0,0,4,4V20a2,2,0,0,0,2,2H18a2,2,0,0,0,2-2V8Z"
+                                                        fill="none" stroke="#fafafa" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="2" />
+                                                    <path id="Path_131022" data-name="Path 131022" d="M14,2V8h6"
+                                                        fill="none" stroke="#fafafa" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="2" />
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <div class="home-network__box-description-wrapper">
+                                            <h3 class="home-network__box-title">نیازمندی‌ها</h3>
+                                            <ul class="home-network__box-list">
+                                                <li class="home-network__box-item">امکان ارائه پشتیبانی 24/7</li>
+                                                <li class="home-network__box-item">لایه یک و دو</li>
+                                                <li class="home-network__box-item">وبسایت</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="home-network__box home-network__box--outline">
+                                        <div class="home-network__box-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="22"
+                                                viewBox="0 0 18 22">
+                                                <g id="clipboard_2_" data-name="clipboard (2)"
+                                                    transform="translate(-3 -1)">
+                                                    <path id="Path_131050" data-name="Path 131050"
+                                                        d="M16,4h2a2,2,0,0,1,2,2V20a2,2,0,0,1-2,2H6a2,2,0,0,1-2-2V6A2,2,0,0,1,6,4H8"
+                                                        fill="none" stroke="#fafafa" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="2" />
+                                                    <rect id="Rectangle_3803" data-name="Rectangle 3803" width="8"
+                                                        height="4" rx="1" transform="translate(8 2)" fill="none"
+                                                        stroke="#fafafa" stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" />
+                                                </g>
+                                            </svg>
+
+                                        </div>
+                                        <div class="home-network__box-description-wrapper">
+                                            <h3 class="home-network__box-title">انتظارات</h3>
+                                            <p class="home-network__box-description">
+                                                برگزاری حداقل 5 رویداد سالیانه در زمینه تکنولوژی
+                                                ابری و فرآیندهای کوچ ابری
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row home-network__inner-tab-panel-row">
+                                    <div class="home-network__box home-network__box--outline">
+                                        <div class="home-network__box-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="22.311" height="22.121"
+                                                viewBox="0 0 22.311 22.121">
+                                                <g id="edit_1_" data-name="edit (1)" transform="translate(-1 -0.879)">
+                                                    <path id="Path_131045" data-name="Path 131045"
+                                                        d="M11,4H4A2,2,0,0,0,2,6V20a2,2,0,0,0,2,2H18a2,2,0,0,0,2-2V13"
+                                                        fill="none" stroke="#fafafa" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="2" />
+                                                    <path id="Path_131046" data-name="Path 131046"
+                                                        d="M18.5,2.5a2.121,2.121,0,0,1,3,3L12,15,8,16l1-4Z" fill="none"
+                                                        stroke="#fafafa" stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" />
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <div class="home-network__box-description-wrapper">
+                                            <h3 class="home-network__box-title">توانمندی ها</h3>
+                                            <ul class="home-network__box-list">
+                                                <li class="home-network__box-item">تسلط کامل به ساختارهای Container و
+                                                    سیستم‌های
+                                                    Orchestration مانند Docker و Kubernetes تسلط بر فرایند های CI/CD
+                                                </li>
+                                                <li class="home-network__box-item">تسلط بر حداقل یک زبان اسکریپت نویسی
+                                                    (Python,
+                                                    Bash)</li>
+                                                <li class="home-network__box-item">مسلط به سیستم‌عامل، شبکه و نگهداری
+                                                    زیرساخت‌های نرم‌افزاری در لود بالا </li>
+                                                <li class="home-network__box-item">بهبود و طراحی معماری زیرساخت سرویس‌ها
+                                                    برای
+                                                    پیاده‌سازی در لود بالا و درک عمیق از TCP/IP </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="home-network__inner-tab-wrapper">
+                            <div data-id="inner-tab2" class="home-network__inner-tab tab">سطح ۲</div>
+                            <div id="inner-tab2" class="home-network__inner-tab-panel tab-panel hidden">
+                                محتوای سطح ۲
+                            </div>
+                        </div>
+
+                        <div class="home-network__inner-tab-wrapper">
+                            <div data-id="inner-tab3" class="home-network__inner-tab tab">سطح ۳</div>
+                            <div id="inner-tab3" class="home-network__inner-tab-panel tab-panel hidden">
+                                محتوای سطح ۳
+                            </div>
+                        </div>
+
+                        <div class="home-network__inner-tab-wrapper">
+                            <div data-id="inner-tab4" class="home-network__inner-tab tab">سطح ۴</div>
+                            <div id="inner-tab4" class="home-network__inner-tab-panel tab-panel hidden">
+                                محتوای سطح ۴
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+
+
+                    {{-- <ul class="home-network__inner-tabs">
                         <li data-id="inner-tab1" class="home-network__inner-tab tab selected">سطح ۱</li>
                         <li data-id="inner-tab2" class="home-network__inner-tab tab">سطح ۲</li>
                         <li data-id="inner-tab3" class="home-network__inner-tab tab">سطح ۳</li>
                         <li data-id="inner-tab4" class="home-network__inner-tab tab">سطح ۴</li>
-                    </ul>
+                    </ul> --}}
 
-                    <div id="inner-tab1" class="home-network__inner-tab-panel tab-panel">
-                        <div class="row home-network__inner-tab-panel-row">
-                            <div class="home-network__box home-network__box--fill">
-                                <div class="home-network__box-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24.836"
-                                        viewBox="0 0 16 24.836">
-                                        <g id="award_2_" data-name="award (2)" transform="translate(0.939 1.275)">
-                                            <ellipse id="Ellipse_1244" data-name="Ellipse 1244" cx="7" cy="7.5" rx="7"
-                                                ry="7.5" transform="translate(0.061 -0.275)" fill="none" stroke="#fff"
-                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-                                            <path id="Path_131020" data-name="Path 131020"
-                                                d="M8.241,13.89,7,23.233l5.128-3.077,5.128,3.077L16.014,13.88"
-                                                transform="translate(-4.949 -0.672)" fill="none" stroke="#fff"
-                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-                                        </g>
-                                    </svg>
-                                </div>
 
-                                <h3 class="home-network__box-title">عنوان رتبه</h3>
-                                <h4 class="home-network__box-subtitle">قهرمان</h4>
 
-                            </div>
-                            <div class="home-network__box home-network__box--fill">
-                                <div class="home-network__box-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="22" viewBox="0 0 18 22">
-                                        <g id="file-text_2_" data-name="file-text (2)" transform="translate(-3 -1)">
-                                            <path id="Path_131051" data-name="Path 131051"
-                                                d="M14,2H6A2,2,0,0,0,4,4V20a2,2,0,0,0,2,2H18a2,2,0,0,0,2-2V8Z"
-                                                fill="none" stroke="#fafafa" stroke-linecap="round"
-                                                stroke-linejoin="round" stroke-width="2" />
-                                            <path id="Path_131052" data-name="Path 131052" d="M14,2V8h6" fill="none"
-                                                stroke="#fafafa" stroke-linecap="round" stroke-linejoin="round"
-                                                stroke-width="2" />
-                                            <line id="Line_894" data-name="Line 894" x1="8" transform="translate(8 13)"
-                                                fill="none" stroke="#fafafa" stroke-linecap="round"
-                                                stroke-linejoin="round" stroke-width="2" />
-                                            <line id="Line_895" data-name="Line 895" x1="8" transform="translate(8 17)"
-                                                fill="none" stroke="#fafafa" stroke-linecap="round"
-                                                stroke-linejoin="round" stroke-width="2" />
-                                            <path id="Path_131053" data-name="Path 131053" d="M10,9H8" fill="none"
-                                                stroke="#fafafa" stroke-linecap="round" stroke-linejoin="round"
-                                                stroke-width="2" />
-                                        </g>
-                                    </svg>
 
-                                </div>
-
-                                <h3 class="home-network__box-title">سابقه</h3>
-                                <h4 class="home-network__box-subtitle">۱۰ سال</h4>
-
-                            </div>
-                            <div class="home-network__box home-network__box--fill">
-                                <div class="home-network__box-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20.087"
-                                        viewBox="0 0 24 20.087">
-                                        <g id="users_1_" data-name="users (1)" transform="translate(0 -1.913)">
-                                            <path id="Path_131024" data-name="Path 131024"
-                                                d="M17,21V19a4,4,0,0,0-4-4H5a4,4,0,0,0-4,4v2" fill="none"
-                                                stroke="#fafafa" stroke-linecap="round" stroke-linejoin="round"
-                                                stroke-width="2" />
-                                            <circle id="Ellipse_1245" data-name="Ellipse 1245" cx="4" cy="4" r="4"
-                                                transform="translate(5 3)" fill="none" stroke="#fafafa"
-                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-                                            <path id="Path_131025" data-name="Path 131025"
-                                                d="M23,21V19a4,4,0,0,0-3-3.87" fill="none" stroke="#fafafa"
-                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-                                            <path id="Path_131026" data-name="Path 131026" d="M16,3.13a4,4,0,0,1,0,7.75"
-                                                fill="none" stroke="#fafafa" stroke-linecap="round"
-                                                stroke-linejoin="round" stroke-width="2" />
-                                        </g>
-                                    </svg>
-
-                                </div>
-
-                                <h3 class="home-network__box-title">تعداد نفرات</h3>
-                                <h4 class="home-network__box-subtitle">۷ نفر فنی - ۳ نفر بیزنسی</h4>
-
-                            </div>
-                        </div>
-                        <div class="row home-network__inner-tab-panel-row">
-                            <div class="home-network__box home-network__box--outline">
-                                <div class="home-network__box-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="22" viewBox="0 0 18 22">
-                                        <g id="file-text_2_" data-name="file-text (2)" transform="translate(-3 -1)">
-                                            <path id="Path_131021" data-name="Path 131021"
-                                                d="M14,2H6A2,2,0,0,0,4,4V20a2,2,0,0,0,2,2H18a2,2,0,0,0,2-2V8Z"
-                                                fill="none" stroke="#fafafa" stroke-linecap="round"
-                                                stroke-linejoin="round" stroke-width="2" />
-                                            <path id="Path_131022" data-name="Path 131022" d="M14,2V8h6" fill="none"
-                                                stroke="#fafafa" stroke-linecap="round" stroke-linejoin="round"
-                                                stroke-width="2" />
-                                        </g>
-                                    </svg>
-                                </div>
-                                <div class="home-network__box-description-wrapper">
-                                    <h3 class="home-network__box-title">نیازمندی‌ها</h3>
-                                    <ul class="home-network__box-list">
-                                        <li class="home-network__box-item">امکان ارائه پشتیبانی 24/7</li>
-                                        <li class="home-network__box-item">لایه یک و دو</li>
-                                        <li class="home-network__box-item">وبسایت</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="home-network__box home-network__box--outline">
-                                <div class="home-network__box-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="22" viewBox="0 0 18 22">
-                                        <g id="clipboard_2_" data-name="clipboard (2)" transform="translate(-3 -1)">
-                                            <path id="Path_131050" data-name="Path 131050"
-                                                d="M16,4h2a2,2,0,0,1,2,2V20a2,2,0,0,1-2,2H6a2,2,0,0,1-2-2V6A2,2,0,0,1,6,4H8"
-                                                fill="none" stroke="#fafafa" stroke-linecap="round"
-                                                stroke-linejoin="round" stroke-width="2" />
-                                            <rect id="Rectangle_3803" data-name="Rectangle 3803" width="8" height="4"
-                                                rx="1" transform="translate(8 2)" fill="none" stroke="#fafafa"
-                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-                                        </g>
-                                    </svg>
-
-                                </div>
-                                <div class="home-network__box-description-wrapper">
-                                    <h3 class="home-network__box-title">انتظارات</h3>
-                                    <p class="home-network__box-description">
-                                        برگزاری حداقل 5 رویداد سالیانه در زمینه تکنولوژی
-                                        ابری و فرآیندهای کوچ ابری
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row home-network__inner-tab-panel-row">
-                            <div class="home-network__box home-network__box--outline">
-                                <div class="home-network__box-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="22.311" height="22.121"
-                                        viewBox="0 0 22.311 22.121">
-                                        <g id="edit_1_" data-name="edit (1)" transform="translate(-1 -0.879)">
-                                            <path id="Path_131045" data-name="Path 131045"
-                                                d="M11,4H4A2,2,0,0,0,2,6V20a2,2,0,0,0,2,2H18a2,2,0,0,0,2-2V13"
-                                                fill="none" stroke="#fafafa" stroke-linecap="round"
-                                                stroke-linejoin="round" stroke-width="2" />
-                                            <path id="Path_131046" data-name="Path 131046"
-                                                d="M18.5,2.5a2.121,2.121,0,0,1,3,3L12,15,8,16l1-4Z" fill="none"
-                                                stroke="#fafafa" stroke-linecap="round" stroke-linejoin="round"
-                                                stroke-width="2" />
-                                        </g>
-                                    </svg>
-                                </div>
-                                <div class="home-network__box-description-wrapper">
-                                    <h3 class="home-network__box-title">توانمندی ها</h3>
-                                    <ul class="home-network__box-list">
-                                        <li class="home-network__box-item">تسلط کامل به ساختارهای Container و سیستم‌های
-                                            Orchestration مانند Docker و Kubernetes تسلط بر فرایند های CI/CD</li>
-                                        <li class="home-network__box-item">تسلط بر حداقل یک زبان اسکریپت نویسی (Python,
-                                            Bash)</li>
-                                        <li class="home-network__box-item">مسلط به سیستم‌عامل، شبکه و نگهداری
-                                            زیرساخت‌های نرم‌افزاری در لود بالا </li>
-                                        <li class="home-network__box-item">بهبود و طراحی معماری زیرساخت سرویس‌ها برای
-                                            پیاده‌سازی در لود بالا و درک عمیق از TCP/IP </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="inner-tab2" class="home-network__inner-tab-panel tab-panel hidden">
-                        سطح ۲
-                    </div>
-                    <div id="inner-tab3" class="home-network__inner-tab-panel tab-panel hidden">
-                        سطح ۳
-                    </div>
-                    <div id="inner-tab4" class="home-network__inner-tab-panel tab-panel hidden">
-                        سطح ۴
-                    </div>
                 </div>
 
             </div>

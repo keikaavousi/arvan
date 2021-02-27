@@ -31,6 +31,7 @@
     align-items: center;
     padding: 20px;
     transition: box-shadow, border-color 0.5s ease;
+    background-color: #FAFAFA;
 
     &:hover {
         box-shadow: -1px 5px 8px 10px rgba(208, 208, 208, 0.19);
@@ -40,15 +41,14 @@
     @media only screen and (max-width: 768px) {
         flex-basis: 100vw;
         height: 70vw;
-        padding: 20px 100px;
     }
 }
 
 .home-benefits__box {
     svg {
         @media only screen and (max-width: 768px) {
-            width: 128px;
-            height: 128px;
+            width: 80px;
+            height: 80px;
         }
     }
 }
