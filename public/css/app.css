@@ -1526,6 +1526,11 @@ a {
   padding: 70px 0;
 }
 
+.home-slider__title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 .home-slider__container {
   position: relative;
   padding-top: 15px;

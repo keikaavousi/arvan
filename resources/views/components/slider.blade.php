@@ -1,5 +1,5 @@
 <section class="home-slider">
-
+    <h2 class="home-slider__title">پروژه‌های موفق</h2>
     <div class="home-slider__container container">
 
         <button class="home-slider__controller home-slider__controller-left" id="prev">
