@@ -36,7 +36,7 @@
                     </ul>
 
                     <div id="inner-tab1" class="home-network__inner-tab-panel tab-panel">
-                        <div class="row">
+                        <div class="row home-network__inner-tab-panel-row">
                             <div class="home-network__box home-network__box--fill">
                                 <div class="home-network__box-icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24.836"
@@ -114,7 +114,7 @@
 
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row home-network__inner-tab-panel-row">
                             <div class="home-network__box home-network__box--outline">
                                 <div class="home-network__box-icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="22" viewBox="0 0 18 22">
@@ -162,7 +162,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row home-network__inner-tab-panel-row">
                             <div class="home-network__box home-network__box--outline">
                                 <div class="home-network__box-icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="22.311" height="22.121"

@@ -2,17 +2,40 @@
     display: flex;
     list-style-type: none;
     margin: 50px 0;
+
+    @media only screen and (max-width: 768px) {
+        background-color: #EEF2F7;
+        border-radius: 12px;
+        align-items: center;
+    }
 }
 
 .page-breadcrumb__item {
     position: relative;
     padding: 10px 5px 0 12px;
 
-    &:not(:last-of-type)::after {
-        content: url('/img/arrow-left.svg');
-        position: absolute;
-        left: 0;
-        top: 12px
+    @media only screen and (min-width: 768px) {
+        &:not(:last-of-type)::after {
+            content: url('/img/arrow-left.svg');
+            position: absolute;
+            left: 0;
+            top: 12px
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        padding: 10px 25px;
+
+        &:not(:first-of-type) {
+            display: none
+        }
+
+        &:first-of-type::before {
+            content: url('/img/arrow-right.svg');
+            position: absolute;
+            right: 10px;
+            top: 12px
+        }
     }
 }
 
