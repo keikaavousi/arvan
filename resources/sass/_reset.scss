@@ -17,13 +17,26 @@ body {
     background-color: #F5F7FA;
 }
 
-:root {
-    --primary-color: #1FC5B9;
-    --dark-button-color: rgba(3, 52, 50, 0.1);
-    --text-color: #155A6D;
-    --light-primary-color: #CAF1F1;
-}
 
 a {
     text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label {
+    font-weight: 500;
+}
+
+p {
+    font-weight: 300;
+}
+
+:root {
+    --primary-color: #1FC5B9;
+    --text-color: #0B3A42;
 }

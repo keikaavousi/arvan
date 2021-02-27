@@ -12,13 +12,11 @@ if (thumbnails) {
         let strip = 0;
         let counter = 0;
         let items_count = items.length;
-        let left_margin, right_margin;
 
         thumbnails.style.width = items_count * 250 + "px";
         left_arrow.disabled = true;
 
         let first_item = thumbnails.querySelector("li:first-of-type");
-        let last_item = thumbnails.querySelector("li:last-of-type");
 
         first_item.dataset.active = "true";
 

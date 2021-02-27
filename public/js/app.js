@@ -2001,14 +2001,15 @@ Array.from(uploaders).forEach(function (uploader) {
     var file = e.target.files[0];
 
     if (file.size > 1000000) {
-      e.target.nextElementSibling.classList.add("failed-validation");
-      e.target.parentNode.children[3].innerHTML = "فایل بزرگتر از حد مجاز است";
-      e.target.parentNode.children[3].classList.add("error-message");
+      e.target.parentNode.classList.add("failed-validation");
+      e.target.parentNode.children[1].classList.add("failed-validation");
+      e.target.parentNode.nextElementSibling.innerHTML = "فایل بزرگتر از حد مجاز است";
+      e.target.parentNode.nextElementSibling.classList.add("error-message");
     } else {
-      e.target.nextElementSibling.children[0].innerText = file.name;
-      e.target.nextElementSibling.classList.remove("failed-validation");
-      e.target.parentNode.children[3].innerHTML = "حداکثر حجم مجاز فایل 1 مگابایت باشد";
-      e.target.parentNode.children[3].classList.remove("error-message");
+      e.target.parentNode.children[1].innerText = file.name;
+      e.target.parentNode.nextElementSibling.classList.remove("failed-validation");
+      e.target.parentNode.nextElementSibling.innerHTML = "حداکثر حجم مجاز فایل 1 مگابایت باشد";
+      e.target.parentNode.nextElementSibling.classList.remove("error-message");
     }
   });
 });
@@ -2081,11 +2082,9 @@ if (thumbnails) {
     var strip = 0;
     var counter = 0;
     var items_count = items.length;
-    var left_margin, right_margin;
     thumbnails.style.width = items_count * 250 + "px";
     left_arrow.disabled = true;
     var first_item = thumbnails.querySelector("li:first-of-type");
-    var last_item = thumbnails.querySelector("li:last-of-type");
     first_item.dataset.active = "true";
     var step = thumbnails.offsetWidth * 14 / 100;
     var safe_count = Math.floor(thumbnails.offsetWidth / step);
@@ -2139,30 +2138,10 @@ if (thumbnails) {
   \******************************/
 /***/ (() => {
 
-var tabClick = function tabClick(_ref) {
+var mainTabClick = function mainTabClick(_ref) {
   var target = _ref.target;
   var _target$dataset$id = target.dataset.id,
       id = _target$dataset$id === void 0 ? "" : _target$dataset$id;
-  document.querySelectorAll(".home-network__inner-tab-container .tab").forEach(function (t) {
-    return t.classList.remove("selected");
-  });
-  target.classList.add("selected");
-  document.querySelectorAll(".home-network__inner-tab-container .tab-panel").forEach(function (t) {
-    return t.classList.add("hidden");
-  });
-  document.querySelector("#".concat(id)).classList.remove("hidden");
-};
-
-var bindTabs = function bindTabs() {
-  document.querySelectorAll(".home-network__inner-tab-container .tab").forEach(function (tab) {
-    tab.addEventListener("click", tabClick);
-  });
-};
-
-var mainTabClick = function mainTabClick(_ref2) {
-  var target = _ref2.target;
-  var _target$dataset$id2 = target.dataset.id,
-      id = _target$dataset$id2 === void 0 ? "" : _target$dataset$id2;
   document.querySelectorAll(".home-network__tabs .tab").forEach(function (t) {
     return t.classList.remove("selected");
   });
@@ -2173,15 +2152,31 @@ var mainTabClick = function mainTabClick(_ref2) {
   document.querySelector("#".concat(id)).classList.remove("hidden");
 };
 
+var innerTabClick = function innerTabClick(_ref2) {
+  var target = _ref2.target;
+  var _target$dataset$id2 = target.dataset.id,
+      id = _target$dataset$id2 === void 0 ? "" : _target$dataset$id2;
+  document.querySelectorAll(".home-network__inner-tab-container .tab").forEach(function (t) {
+    return t.classList.remove("selected");
+  });
+  target.classList.add("selected");
+  document.querySelectorAll(".home-network__inner-tab-container .tab-panel").forEach(function (t) {
+    return t.classList.add("hidden");
+  });
+  document.querySelector("#".concat(id)).classList.remove("hidden");
+};
+
 var bindMainTabs = function bindMainTabs() {
   document.querySelectorAll(".home-network__tabs > .tab").forEach(function (tab) {
     tab.addEventListener("click", mainTabClick);
+  });
+  document.querySelectorAll(".home-network__inner-tab-container .tab").forEach(function (tab) {
+    tab.addEventListener("click", innerTabClick);
   });
 };
 
 document.addEventListener("DOMContentLoaded", function () {
   bindMainTabs();
-  bindTabs();
 });
 
 /***/ }),

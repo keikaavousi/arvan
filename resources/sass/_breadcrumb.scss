@@ -10,6 +10,13 @@
     }
 }
 
+.page-breadcrumb__container {
+    @media only screen and (max-width: 768px) {
+        max-width: 100%;
+        padding: 0 35px;
+    }
+}
+
 .page-breadcrumb__item {
     position: relative;
     padding: 10px 5px 0 12px;

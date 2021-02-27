@@ -8,7 +8,7 @@
         </p>
         <div class="row home-buttons">
             <a href="" class="button button--fill">مشاوره بگیرید</a>
-            <a href="" class="button button--outline">همکاری کنید</a>
+            <a href="/form" class="button button--outline">همکاری کنید</a>
         </div>
     </div>
 </section>

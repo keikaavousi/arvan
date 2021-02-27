@@ -82,16 +82,23 @@ Array.from(uploaders).forEach(function (uploader) {
     uploader.addEventListener("change", function (e) {
         const file = e.target.files[0];
         if (file.size > 1000000) {
-            e.target.nextElementSibling.classList.add("failed-validation");
-            e.target.parentNode.children[3].innerHTML =
+            e.target.parentNode.classList.add("failed-validation");
+            e.target.parentNode.children[1].classList.add("failed-validation");
+            e.target.parentNode.nextElementSibling.innerHTML =
                 "فایل بزرگتر از حد مجاز است";
-            e.target.parentNode.children[3].classList.add("error-message");
+            e.target.parentNode.nextElementSibling.classList.add(
+                "error-message"
+            );
         } else {
-            e.target.nextElementSibling.children[0].innerText = file.name;
-            e.target.nextElementSibling.classList.remove("failed-validation");
-            e.target.parentNode.children[3].innerHTML =
+            e.target.parentNode.children[1].innerText = file.name;
+            e.target.parentNode.nextElementSibling.classList.remove(
+                "failed-validation"
+            );
+            e.target.parentNode.nextElementSibling.innerHTML =
                 "حداکثر حجم مجاز فایل 1 مگابایت باشد";
-            e.target.parentNode.children[3].classList.remove("error-message");
+            e.target.parentNode.nextElementSibling.classList.remove(
+                "error-message"
+            );
         }
     });
 });
