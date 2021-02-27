@@ -49,9 +49,10 @@
 
                     <div class="page-form__form-group">
                         <label class="page-form__form-label page-form__form-label--required" for="cv">رزومه</label>
-                        <input accept="application/pdf" class="page-form__file-uploader" name="cv" id="cv" type="file"
-                            required>
+
                         <label for="cv" class="page-form__custom-file-uploader">
+                            <input accept="application/pdf" class="page-form__file-uploader" name="cv" id="cv"
+                                type="file" required>
                             <span class="page-form__custom-file-uploader__file-name"></span>
                             <span class="page-form__custom-file-uploader-button">انتخاب فایل
                                 pdf</span>
@@ -61,9 +62,10 @@
 
                     <div class="page-form__form-group">
                         <label class="page-form__form-label" for="potrfolio">پورتفولیو</label>
-                        <input accept="application/pdf" class="page-form__file-uploader" name="portfolio" id="potrfolio"
-                            type="file">
+
                         <label for="potrfolio" class="page-form__custom-file-uploader">
+                            <input accept="application/pdf" class="page-form__file-uploader" name="portfolio"
+                                id="potrfolio" type="file">
                             <span class="page-form__custom-file-uploader__file-name"></span>
                             <span class="page-form__custom-file-uploader-button">انتخاب فایل
                                 pdf</span>

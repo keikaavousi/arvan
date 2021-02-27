@@ -95,8 +95,11 @@
 }
 
 .page-form__file-uploader {
-    display: none;
+    opacity: 0;
+    z-index: -1;
+    position: absolute;
 }
+
 
 .page-form__custom-file-uploader {
     background-color: #fff;
@@ -111,7 +114,8 @@
     display: flex;
     align-items: center;
 
-    &:focus {
+
+    &:focus-within {
         border-color: var(--primary-color);
 
         .page-form__custom-file-uploader-button {
