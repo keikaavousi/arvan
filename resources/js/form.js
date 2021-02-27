@@ -1,6 +1,32 @@
 const form = document.getElementById("register_form");
+const submitButton = document.getElementById("form-submit-button");
+
+const enableButton = (button) => {
+    button.disabled = false;
+    button.classList.remove("button--disabled");
+    button.classList.add("button--fill");
+};
+
+const disableButton = (button) => {
+    button.disabled = true;
+    button.classList.add("button--disabled");
+    button.classList.remove("button--fill");
+};
+
+form.addEventListener("change", () => {
+    if (form.checkValidity()) {
+        enableButton(submitButton);
+    } else {
+        disableButton(submitButton);
+    }
+});
+
 form.addEventListener("submit", function (e) {
     e.preventDefault();
+    disableButton(submitButton);
+    const loading = document.createElement("SPAN");
+    loading.classList.add("loading");
+    submitButton.appendChild(loading);
 
     const formInputs = form.elements;
 
@@ -40,6 +66,7 @@ form.addEventListener("submit", function (e) {
         .then((result) => {
             if (result.requestId) {
                 alert("اطلاعات با موفقیت ارسال شد");
+                window.location.reload();
             }
         })
         .catch((error) => console.log(error.message))
@@ -67,17 +94,4 @@ Array.from(uploaders).forEach(function (uploader) {
             e.target.parentNode.children[3].classList.remove("error-message");
         }
     });
-});
-
-const submitButton = document.getElementById("form-submit-button");
-form.addEventListener("change", () => {
-    if (form.checkValidity()) {
-        submitButton.disabled = false;
-        submitButton.classList.remove("button--disabled");
-        submitButton.classList.add("button--fill");
-    } else {
-        submitButton.disabled = true;
-        submitButton.classList.add("button--disabled");
-        submitButton.classList.remove("button--fill");
-    }
 });

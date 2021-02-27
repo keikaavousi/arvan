@@ -1904,8 +1904,33 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
 var form = document.getElementById("register_form");
+var submitButton = document.getElementById("form-submit-button");
+
+var enableButton = function enableButton(button) {
+  button.disabled = false;
+  button.classList.remove("button--disabled");
+  button.classList.add("button--fill");
+};
+
+var disableButton = function disableButton(button) {
+  button.disabled = true;
+  button.classList.add("button--disabled");
+  button.classList.remove("button--fill");
+};
+
+form.addEventListener("change", function () {
+  if (form.checkValidity()) {
+    enableButton(submitButton);
+  } else {
+    disableButton(submitButton);
+  }
+});
 form.addEventListener("submit", function (e) {
   e.preventDefault();
+  disableButton(submitButton);
+  var loading = document.createElement("SPAN");
+  loading.classList.add("loading");
+  submitButton.appendChild(loading);
   var formInputs = form.elements;
   var formcells = [];
 
@@ -1948,6 +1973,7 @@ form.addEventListener("submit", function (e) {
   }).then(function (result) {
     if (result.requestId) {
       alert("اطلاعات با موفقیت ارسال شد");
+      window.location.reload();
     }
   })["catch"](function (error) {
     return console.log(error.message);
@@ -1983,18 +2009,6 @@ Array.from(uploaders).forEach(function (uploader) {
       e.target.parentNode.children[3].classList.remove("error-message");
     }
   });
-});
-var submitButton = document.getElementById("form-submit-button");
-form.addEventListener("change", function () {
-  if (form.checkValidity()) {
-    submitButton.disabled = false;
-    submitButton.classList.remove("button--disabled");
-    submitButton.classList.add("button--fill");
-  } else {
-    submitButton.disabled = true;
-    submitButton.classList.add("button--disabled");
-    submitButton.classList.remove("button--fill");
-  }
 });
 
 /***/ }),

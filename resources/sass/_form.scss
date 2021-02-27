@@ -240,3 +240,23 @@
 .error-message {
     color: #FE5959;
 }
+
+.loading {
+    display: block;
+    margin: 0 auto;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    animation: loading 1s ease infinite alternate;
+}
+
+@keyframes loading {
+    0% {
+        transform: scale(1)
+    }
+
+    100% {
+        transform: scale(1.4)
+    }
+}
