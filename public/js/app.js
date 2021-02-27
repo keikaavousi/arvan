@@ -1846,6 +1846,10 @@ __webpack_require__(/*! ./tabs */ "./resources/js/tabs.js");
 
 __webpack_require__(/*! ./slider */ "./resources/js/slider.js");
 
+__webpack_require__(/*! ./select */ "./resources/js/select.js");
+
+__webpack_require__(/*! ./form */ "./resources/js/form.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -1879,6 +1883,157 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
+/***/ "./resources/js/form.js":
+/*!******************************!*\
+  !*** ./resources/js/form.js ***!
+  \******************************/
+/***/ (() => {
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+var form = document.getElementById("register_form");
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  var formInputs = form.elements;
+  var formcells = [];
+
+  var _iterator = _createForOfIteratorHelper(formInputs),
+      _step;
+
+  try {
+    for (_iterator.s(); !(_step = _iterator.n()).done;) {
+      var input = _step.value;
+
+      if (input.name) {
+        var inputdata = {
+          column: input.name,
+          value: input.value
+        };
+        formcells = [].concat(_toConsumableArray(formcells), [inputdata]);
+      }
+    }
+  } catch (err) {
+    _iterator.e(err);
+  } finally {
+    _iterator.f();
+  }
+
+  var formObj = {
+    rows: [{
+      cells: formcells
+    }]
+  };
+  fetch("https://coda.io/apis/v1/docs/hvS2xAGEM0/tables/grid-BwzAsGtrL4/rows", {
+    method: "POST",
+    body: JSON.stringify(formObj),
+    headers: {
+      Authorization: "Bearer f1b765e8-c6d9-40e0-886b-c32c4b080e48",
+      "content-type": "application/json",
+      accept: "application/json"
+    }
+  }).then(function (response) {
+    return response.json();
+  }).then(function (result) {
+    if (result.requestId) {
+      alert("اطلاعات با موفقیت ارسال شد");
+    }
+  })["catch"](function (error) {
+    return console.log(error.message);
+  })["finally"](function () {
+    var _iterator2 = _createForOfIteratorHelper(formInputs),
+        _step2;
+
+    try {
+      for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+        var input = _step2.value;
+        input.value = "";
+      }
+    } catch (err) {
+      _iterator2.e(err);
+    } finally {
+      _iterator2.f();
+    }
+  });
+});
+var uploaders = form.querySelectorAll("[type=file]");
+Array.from(uploaders).forEach(function (uploader) {
+  uploader.addEventListener("change", function (e) {
+    var file = e.target.files[0];
+
+    if (file.size > 1000000) {
+      e.target.nextElementSibling.classList.add("failed-validation");
+      e.target.parentNode.children[3].innerHTML = "فایل بزرگتر از حد مجاز است";
+      e.target.parentNode.children[3].classList.add("error-message");
+    } else {
+      e.target.nextElementSibling.children[0].innerText = file.name;
+      e.target.nextElementSibling.classList.remove("failed-validation");
+      e.target.parentNode.children[3].innerHTML = "حداکثر حجم مجاز فایل 1 مگابایت باشد";
+      e.target.parentNode.children[3].classList.remove("error-message");
+    }
+  });
+});
+var submitButton = document.getElementById("form-submit-button");
+form.addEventListener("change", function () {
+  if (form.checkValidity()) {
+    submitButton.disabled = false;
+    submitButton.classList.remove("button--disabled");
+    submitButton.classList.add("button--fill");
+  } else {
+    submitButton.disabled = true;
+    submitButton.classList.add("button--disabled");
+    submitButton.classList.remove("button--fill");
+  }
+});
+
+/***/ }),
+
+/***/ "./resources/js/select.js":
+/*!********************************!*\
+  !*** ./resources/js/select.js ***!
+  \********************************/
+/***/ (() => {
+
+var selects = document.querySelectorAll(".page-form__custom-select");
+selects.forEach(function (select) {
+  select.addEventListener("click", function () {
+    select.classList.toggle("page-form__custom-select--open");
+    select.nextElementSibling.classList.toggle("page-form__custom-select__options-wrapper--open");
+  });
+});
+var options = document.querySelectorAll(".form-group__custom-select__option");
+options.forEach(function (option) {
+  option.addEventListener("click", function () {
+    this.parentNode.nextElementSibling.value = this.innerText;
+    this.parentNode.previousElementSibling.innerHTML = this.innerText;
+    selects.forEach(function (select) {
+      select.classList.remove("page-form__custom-select--open");
+      select.nextElementSibling.classList.remove("page-form__custom-select__options-wrapper--open");
+    });
+  });
+});
+document.body.addEventListener("click", function (e) {
+  selects.forEach(function (select) {
+    if (e.target !== select) {
+      select.classList.remove("page-form__custom-select--open");
+      select.nextElementSibling.classList.remove("page-form__custom-select__options-wrapper--open");
+    }
+  });
+});
+
+/***/ }),
+
 /***/ "./resources/js/slider.js":
 /*!********************************!*\
   !*** ./resources/js/slider.js ***!
@@ -1886,59 +2041,62 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /***/ (() => {
 
 var thumbnails = document.querySelector(".home-slider__thumbnails-list");
-var items = thumbnails.querySelectorAll("li");
-var right_arrow = document.querySelector(".home-slider__controller-right");
-var left_arrow = document.querySelector(".home-slider__controller-left");
-var strip = 0;
-var counter = 0;
-var items_count = items.length;
-var left_margin, right_margin;
-thumbnails.style.width = items_count * 250 + "px";
-left_arrow.disabled = true;
-var first_item = thumbnails.querySelector("li:first-of-type");
-var last_item = thumbnails.querySelector("li:last-of-type");
-first_item.dataset.active = "true";
-var step = thumbnails.offsetWidth * 14 / 100;
-var safe_count = Math.floor(thumbnails.offsetWidth / step);
-right_arrow.addEventListener("click", function (e) {
-  if (counter > items_count - safe_count) {
-    right_arrow.disabled = true;
-  } else {
-    counter++;
-    items.forEach(function (item, index) {
-      if (counter === index) {
-        item.dataset.active = "true";
-      } else {
-        delete item.dataset.active;
-      }
-    });
-    strip += step;
-    thumbnails.style.transform = "translateX(".concat(strip, "px)");
-    left_arrow.disabled = false;
-  }
-});
-left_arrow.addEventListener("click", function (e) {
-  if (counter < 1) {
-    left_arrow.disabled = true;
-  } else {
-    counter--;
-    left_arrow.disabled = false;
-    items.forEach(function (item, index) {
-      if (counter === index) {
-        item.dataset.active = "true";
-      } else {
-        delete item.dataset.active;
-      }
-    });
-    strip -= step;
-    thumbnails.style.transform = "translateX(".concat(strip, "px)");
-    right_arrow.disabled = false;
 
+if (thumbnails) {
+  var items = thumbnails.querySelectorAll("li");
+  var right_arrow = document.querySelector(".home-slider__controller-right");
+  var left_arrow = document.querySelector(".home-slider__controller-left");
+  var strip = 0;
+  var counter = 0;
+  var items_count = items.length;
+  var left_margin, right_margin;
+  thumbnails.style.width = items_count * 250 + "px";
+  left_arrow.disabled = true;
+  var first_item = thumbnails.querySelector("li:first-of-type");
+  var last_item = thumbnails.querySelector("li:last-of-type");
+  first_item.dataset.active = "true";
+  var step = thumbnails.offsetWidth * 14 / 100;
+  var safe_count = Math.floor(thumbnails.offsetWidth / step);
+  right_arrow.addEventListener("click", function (e) {
+    if (counter > items_count - safe_count) {
+      right_arrow.disabled = true;
+    } else {
+      counter++;
+      items.forEach(function (item, index) {
+        if (counter === index) {
+          item.dataset.active = "true";
+        } else {
+          delete item.dataset.active;
+        }
+      });
+      strip += step;
+      thumbnails.style.transform = "translateX(".concat(strip, "px)");
+      left_arrow.disabled = false;
+    }
+  });
+  left_arrow.addEventListener("click", function (e) {
     if (counter < 1) {
       left_arrow.disabled = true;
+    } else {
+      counter--;
+      left_arrow.disabled = false;
+      items.forEach(function (item, index) {
+        if (counter === index) {
+          item.dataset.active = "true";
+        } else {
+          delete item.dataset.active;
+        }
+      });
+      strip -= step;
+      thumbnails.style.transform = "translateX(".concat(strip, "px)");
+      right_arrow.disabled = false;
+
+      if (counter < 1) {
+        left_arrow.disabled = true;
+      }
     }
-  }
-});
+  });
+}
 
 /***/ }),
 

@@ -1,20 +1,29 @@
-.button{
+.button {
     display: inline-block;
     padding: 10px 40px;
     border-radius: 8px;
     margin: 5px;
-    border:none;
+    border: none;
+    outline: none;
 }
-.button--fill{
+
+.button--fill {
     background-color: var(--primary-color);
     color: #fff;
+
+    &:hover {
+        background-color: #009191;
+        box-shadow: 0 3px 6px 6px rgba(0, 0, 0, 0.16);
+    }
 }
-.button--outline{
-    border:2px solid var(--primary-color);
-    background-color:transparent;
+
+.button--outline {
+    border: 2px solid var(--primary-color);
+    background-color: transparent;
     color: var(--primary-color);
 }
-.button--disabled{
+
+.button--disabled {
     background-color: #EEF2F7;
     color: #9DB0CB;
 }
