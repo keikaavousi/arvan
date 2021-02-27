@@ -1920,99 +1920,101 @@ var disableButton = function disableButton(button) {
   button.classList.remove("button--fill");
 };
 
-form.addEventListener("change", function () {
-  if (form.checkValidity()) {
-    enableButton(submitButton);
-  } else {
+if (form) {
+  form.addEventListener("change", function () {
+    if (form.checkValidity()) {
+      enableButton(submitButton);
+    } else {
+      disableButton(submitButton);
+    }
+  });
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
     disableButton(submitButton);
-  }
-});
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
-  disableButton(submitButton);
-  var loading = document.createElement("SPAN");
-  loading.classList.add("loading");
-  submitButton.appendChild(loading);
-  var formInputs = form.elements;
-  var formcells = [];
+    var loading = document.createElement("SPAN");
+    loading.classList.add("loading");
+    submitButton.appendChild(loading);
+    var formInputs = form.elements;
+    var formcells = [];
 
-  var _iterator = _createForOfIteratorHelper(formInputs),
-      _step;
-
-  try {
-    for (_iterator.s(); !(_step = _iterator.n()).done;) {
-      var input = _step.value;
-
-      if (input.name) {
-        var inputdata = {
-          column: input.name,
-          value: input.value
-        };
-        formcells = [].concat(_toConsumableArray(formcells), [inputdata]);
-      }
-    }
-  } catch (err) {
-    _iterator.e(err);
-  } finally {
-    _iterator.f();
-  }
-
-  var formObj = {
-    rows: [{
-      cells: formcells
-    }]
-  };
-  fetch("https://coda.io/apis/v1/docs/hvS2xAGEM0/tables/grid-BwzAsGtrL4/rows", {
-    method: "POST",
-    body: JSON.stringify(formObj),
-    headers: {
-      Authorization: "Bearer f1b765e8-c6d9-40e0-886b-c32c4b080e48",
-      "content-type": "application/json",
-      accept: "application/json"
-    }
-  }).then(function (response) {
-    return response.json();
-  }).then(function (result) {
-    if (result.requestId) {
-      alert("اطلاعات با موفقیت ارسال شد");
-      window.location.reload();
-    }
-  })["catch"](function (error) {
-    return console.log(error.message);
-  })["finally"](function () {
-    var _iterator2 = _createForOfIteratorHelper(formInputs),
-        _step2;
+    var _iterator = _createForOfIteratorHelper(formInputs),
+        _step;
 
     try {
-      for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
-        var input = _step2.value;
-        input.value = "";
+      for (_iterator.s(); !(_step = _iterator.n()).done;) {
+        var input = _step.value;
+
+        if (input.name) {
+          var inputdata = {
+            column: input.name,
+            value: input.value
+          };
+          formcells = [].concat(_toConsumableArray(formcells), [inputdata]);
+        }
       }
     } catch (err) {
-      _iterator2.e(err);
+      _iterator.e(err);
     } finally {
-      _iterator2.f();
+      _iterator.f();
     }
-  });
-});
-var uploaders = form.querySelectorAll("[type=file]");
-Array.from(uploaders).forEach(function (uploader) {
-  uploader.addEventListener("change", function (e) {
-    var file = e.target.files[0];
 
-    if (file.size > 1000000) {
-      e.target.parentNode.classList.add("failed-validation");
-      e.target.parentNode.children[1].classList.add("failed-validation");
-      e.target.parentNode.nextElementSibling.innerHTML = "فایل بزرگتر از حد مجاز است";
-      e.target.parentNode.nextElementSibling.classList.add("error-message");
-    } else {
-      e.target.parentNode.children[1].innerText = file.name;
-      e.target.parentNode.nextElementSibling.classList.remove("failed-validation");
-      e.target.parentNode.nextElementSibling.innerHTML = "حداکثر حجم مجاز فایل 1 مگابایت باشد";
-      e.target.parentNode.nextElementSibling.classList.remove("error-message");
-    }
+    var formObj = {
+      rows: [{
+        cells: formcells
+      }]
+    };
+    fetch("https://coda.io/apis/v1/docs/hvS2xAGEM0/tables/grid-BwzAsGtrL4/rows", {
+      method: "POST",
+      body: JSON.stringify(formObj),
+      headers: {
+        Authorization: "Bearer f1b765e8-c6d9-40e0-886b-c32c4b080e48",
+        "content-type": "application/json",
+        accept: "application/json"
+      }
+    }).then(function (response) {
+      return response.json();
+    }).then(function (result) {
+      if (result.requestId) {
+        alert("اطلاعات با موفقیت ارسال شد");
+        window.location.reload();
+      }
+    })["catch"](function (error) {
+      return console.log(error.message);
+    })["finally"](function () {
+      var _iterator2 = _createForOfIteratorHelper(formInputs),
+          _step2;
+
+      try {
+        for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+          var input = _step2.value;
+          input.value = "";
+        }
+      } catch (err) {
+        _iterator2.e(err);
+      } finally {
+        _iterator2.f();
+      }
+    });
   });
-});
+  var uploaders = form.querySelectorAll("[type=file]");
+  Array.from(uploaders).forEach(function (uploader) {
+    uploader.addEventListener("change", function (e) {
+      var file = e.target.files[0];
+
+      if (file.size > 1000000) {
+        e.target.parentNode.classList.add("failed-validation");
+        e.target.parentNode.children[1].classList.add("failed-validation");
+        e.target.parentNode.nextElementSibling.innerHTML = "فایل بزرگتر از حد مجاز است";
+        e.target.parentNode.nextElementSibling.classList.add("error-message");
+      } else {
+        e.target.parentNode.children[1].innerText = file.name;
+        e.target.parentNode.nextElementSibling.classList.remove("failed-validation");
+        e.target.parentNode.nextElementSibling.innerHTML = "حداکثر حجم مجاز فایل 1 مگابایت باشد";
+        e.target.parentNode.nextElementSibling.classList.remove("error-message");
+      }
+    });
+  });
+}
 
 /***/ }),
 
